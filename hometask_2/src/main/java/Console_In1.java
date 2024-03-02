@@ -10,8 +10,8 @@ public class Console_In1 {
 
         int x , y , z, j;
 
-//        int numDigits = (int) Math.log10(number) + 1;  ( если ввести ноль будет мин значение инта, как я понял)
-        int numDigits = String.valueOf(number).length();
+        int numDigits = (int) Math.log10(number) + 1; // ( если ввести ноль будет мин значение инта, как я понял)
+//      int numDigits = String.valueOf(number).length();
         System.out.println("Всего " + numDigits + " знака");
 
 

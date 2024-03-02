@@ -4,18 +4,18 @@ public class TimeOfYear_If {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        String TimeOfYear = scanner.next();
+        String timeOfYear = scanner.next();
 
-        if (TimeOfYear.equals("january") || TimeOfYear.equals("february") || TimeOfYear.equals("december"))  {
+        if (timeOfYear.equals("january") || timeOfYear.equals("february") || timeOfYear.equals("december"))  {
             System.out.println("winter");
 
-        } else if (TimeOfYear.equals("march") || TimeOfYear.equals("april") || TimeOfYear.equals("may")) {
+        } else if (timeOfYear.equals("march") || timeOfYear.equals("april") || timeOfYear.equals("may")) {
             System.out.println("spring");
 
-        } else if (TimeOfYear.equals("june") || TimeOfYear.equals("july") || TimeOfYear.equals("august")) {
+        } else if (timeOfYear.equals("june") || timeOfYear.equals("july") || timeOfYear.equals("august")) {
             System.out.println("summer");
 
-        } else if (TimeOfYear.equals("september") || TimeOfYear.equals("october") || TimeOfYear.equals("november")) {
+        } else if (timeOfYear.equals("september") || timeOfYear.equals("october") || timeOfYear.equals("november")) {
             System.out.println("autumn");
 
         }

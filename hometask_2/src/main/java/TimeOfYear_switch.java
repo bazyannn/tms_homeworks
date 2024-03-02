@@ -6,9 +6,9 @@ public class TimeOfYear_switch {
 
 
         Scanner scanner = new Scanner(System.in);
-        String TimeOfYear = scanner.next();
+        String timeOfYear = scanner.next();
 
-        switch (TimeOfYear) {
+        switch (timeOfYear) {
             case "january", "february", "december":
                  System.out.println("winter");
                  break;
