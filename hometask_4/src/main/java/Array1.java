@@ -5,6 +5,7 @@ public class Array1 {
 
     public static void main(String[] args) {
 
+        // создание массива целых чисел
         int n;
         Scanner console = new Scanner(System.in);
         System.out.print("Enter numbers of array: ");
@@ -15,6 +16,7 @@ public class Array1 {
         }
         System.out.println(Arrays.toString(arr));
 
+        // среднее арифметическое всех чисел
         double sum = 0;
         for (int x : arr) {
             sum += x;
@@ -24,6 +26,8 @@ public class Array1 {
         System.out.print("Average: " + average);
 
         System.out.println();
+
+        // найти любое число которое повторяется
 
         System.out.println("Enter number for find: ");
 
@@ -41,6 +45,8 @@ public class Array1 {
 
         System.out.println(Arrays.toString(indexArr));
 
+        // сортировка массива min-max
+
         int buf;
         for (int i = 0; i < arr.length - 1; i++) {
             for (int k = 0; k < arr.length - 1 - i; k++) {
@@ -56,6 +62,8 @@ public class Array1 {
 
         System.out.println(Arrays.toString(arr));
 
+        // сортировка массива max-min
+
         int z = arr.length;
         for (int i = 0; i < z / 2; i++) {
             int temp = arr[z - i - 1];
@@ -64,6 +72,8 @@ public class Array1 {
         }
 
         System.out.println("Sort max-min: ");
+
+        // скопировать в новый массив, но в обратном порядке(получилось преобразовать)
 
         for (int i = 0; i < n; i++) {
             System.out.print(arr[i] + " " );
