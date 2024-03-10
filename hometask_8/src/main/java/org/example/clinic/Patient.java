@@ -7,6 +7,7 @@ public class Patient {
     private String doctor;
     private int plan;
 
+    /*
     public void setDoctor() {
 
         Heal doctor;                     // Doctor (если через абстрактный класс)
@@ -25,24 +26,26 @@ public class Patient {
         }
         doctor.treat();
 
+
     }
+   */
 
-
-    public void setPlan(int plan) {
-        this.plan = plan;
-    }
-
-    public int getPlan() {
-        return plan;
+    public String getDoctor() {
+        return doctor;
     }
 
     public void setDoctor(String doctor) {
         this.doctor = doctor;
     }
 
-    public String getDoctor() {
-        return doctor;
+    public int getPlan() {
+        return plan;
     }
 
+    public void setPlan(int plan) {
+        this.plan = plan;
+    }
 
 }
+
+
