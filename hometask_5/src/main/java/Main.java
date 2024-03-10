@@ -8,7 +8,9 @@ public class Main {
         cat1.info();
         cat2.info();
 
-        System.out.println(cat1.newName());
-        System.out.println(cat2.newName());
+        String newName = "Tom";
+
+        System.out.println(cat1.newName(newName));
+        System.out.println(cat2.newName(newName));
     }
 }

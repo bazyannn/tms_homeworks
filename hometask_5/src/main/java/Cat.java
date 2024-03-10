@@ -11,7 +11,7 @@ public class Cat {
 
     }
     public Cat (String name, int age) {
-        this(name,age," ");
+        this(name,age,"No breed");
         this.breed = "No breed";
 
     }
@@ -22,8 +22,8 @@ public class Cat {
         System.out.println(breed);
     }
 
-    public String newName() {
-        this.name = "Tom";
+    public String newName(String newName) {
+        this.name = newName;
         return name;
 
     }
