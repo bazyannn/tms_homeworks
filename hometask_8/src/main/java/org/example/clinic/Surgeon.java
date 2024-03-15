@@ -9,8 +9,5 @@ public class Surgeon implements Heal {        // extends Doctor(если чер�
     public void treat() {
         System.out.println("Do operation");
     }
-
-
-
 }
 

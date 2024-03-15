@@ -6,24 +6,24 @@ public class Main {
 
         Therapist therapist = new Therapist();
 
-        Patient patient1 = therapist.patient;         // Patient patient1 = new Patient(); (когда метод назначения доктора в классе Patient)
+        Patient patient1 = new Patient();
         patient1.setPlan(1);
-        therapist.setDoctor();                        // patient1.setDoctor();
+        therapist.setDoctor(patient1);
         System.out.println(patient1.getDoctor());
 
-        Patient patient2 = therapist.patient;         // Patient patient2 = new Patient();
+        Patient patient2 = new Patient();
         patient2.setPlan(2);
-        therapist.setDoctor();                        // patient2.setDoctor();
+        therapist.setDoctor(patient2);
         System.out.println(patient2.getDoctor());
 
-        Patient patient3 = therapist.patient;         //  Patient patient3 = new Patient();
+        Patient patient3 = new Patient();
         patient3.setPlan(5);
-        therapist.setDoctor();                        //  patient3.setDoctor();
+        therapist.setDoctor(patient3);
         System.out.println(patient3.getDoctor());
 
-        Patient patient4 = therapist.patient;         //  Patient patient4 = new Patient();
+        Patient patient4 = new Patient();
         patient4.setPlan(7);
-        therapist.setDoctor();                        //  patient4.setDoctor();
+        therapist.setDoctor(patient4);
         System.out.println(patient4.getDoctor());
 
     }
