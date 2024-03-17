@@ -4,5 +4,7 @@ include 'hometask_2'
 include 'hometask_4'
 include 'hometask_6'
 include 'hometask_7'
-master
+include 'hometask_6'
+include 'hometask_7'
+include 'hometask_10'
 
