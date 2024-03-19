@@ -11,8 +11,7 @@ public class Cat {
 
     }
     public Cat (String name, int age) {
-        this(name,age,"No breed");
-        this.breed = "No breed";
+        this(name,age,"No breed"); // this(name,age,"no_set"); this.breed = "No breed";
 
     }
 
