@@ -1,32 +1,59 @@
 package org.example.clinic;
 
-import org.example.interfaces.Heal;
+public class Therapist extends Doctor {
 
-public class Therapist implements Heal {    // extends Doctor(если через абстрактный класс)
+/*    private Doctor [] doctors = new Doctor[2];
+//
+//    public Therapist(Doctor... doctors) {
+//        this.doctors = doctors;
+//    }
 
+ */        // решение Сергей
     @Override
     public void treat() {
         System.out.println("Prescribe medications");
     }
+/*
+    @Override
+    public String type() {
+        return "Therapist";
+    }*/      // решение Сергей
 
     public void setDoctor(Patient patient) {
 
-        Heal doctor;                     // Doctor (если через абстрактный класс)
+        Doctor doctor;                         // мой вариант
 
         if (patient.getPlan() == 1) {
             doctor = new Surgeon();
-            patient.setDoctor("Surgeon");        // сетаем доктора в поле пациента(чтобы вывести в консоль, что назначен доктор)
+            patient.setDoctor(doctor);
 
         } else if (patient.getPlan() == 2) {
             doctor = new Dentist();
-            patient.setDoctor("Dentist");        // сетаем доктора в поле пациента(чтобы вывести в консоль, что назначен доктор)
+            patient.setDoctor(doctor);
 
         } else {
             doctor = new Therapist();
-            patient.setDoctor("Therapist");      // сетаем доктора в поле пациента(чтобы вывести в консоль, что назначен доктор)
+            patient.setDoctor(doctor);
         }
-        doctor.treat();
     }
+    /*   int plan = patient.getPlan();
+//
+//        if (plan == 1){
+//            for (var doctor:doctors ) {
+//                if (doctor.type().equals("Surgeon")) {
+//                    patient.setDoctor(doctor);
+//                }
+//            }
+//        } else if (plan == 2) {
+//            for (var doctor : doctors) {
+//                if (doctor.type().equals("Dentist")) {
+//                    patient.setDoctor(doctor);
+//                }
+//            }
+//        } else {
+//            patient.setDoctor(this);
+        }
+*/                    // решение Сергей
 }
 
 

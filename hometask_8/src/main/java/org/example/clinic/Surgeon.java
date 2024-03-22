@@ -1,13 +1,19 @@
 package org.example.clinic;
 
-import org.example.interfaces.Heal;
-
-public class Surgeon implements Heal {        // extends Doctor(если через абстрактный класс)
-
-
+public class Surgeon extends Doctor {
     @Override
     public void treat() {
         System.out.println("Do operation");
     }
+/*
+    @Override
+    public String type() {          // решение Сергей
+        return "Surgeon";
+    }*/       // решение Сергей
 }
+
+
+
+
+
 

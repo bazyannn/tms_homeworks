@@ -4,4 +4,7 @@ package org.example.clinic;
 public abstract class Doctor {
 
     public abstract void treat();
+
+//    public abstract String type ();   // решение Сергей
+
 }
