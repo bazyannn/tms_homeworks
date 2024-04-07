@@ -31,20 +31,25 @@ public class MainException {
 
         String confirmPassword = scanner.nextLine();
 
+        System.out.println(isValid(login,password,confirmPassword));
+    }
+
+    public static boolean isValid (String login,String password,String confirmPassword) {
+
+       Validation validation = new Validation();
         try {
-            System.out.println(Validation.validService(login,password,confirmPassword));
-        } catch (WrongLoginException exc) {
-            boolean isLogin = false;
-            System.out.println(isLogin);
-            System.out.println(exc.getMessage());
-            System.out.println("Enter valid Login");
+            validation.Valid(login, password, confirmPassword);
+            return true;
+        } catch (WrongLoginException e) {
+//            System.out.println(e.getMessage());
+//            System.out.println("Enter valid Login");
+            return false;
         } catch (WrongPasswordException e) {
-            boolean isPassword = false;
-            System.out.println(isPassword);
-            System.out.println("invalid Password\n" + "Enter valid Password");
-            System.out.println(e.getMessage());
+//            System.out.println("invalid Password\n" + "Enter valid Password");
+            return false;
         }
 
     }
+
 }
 

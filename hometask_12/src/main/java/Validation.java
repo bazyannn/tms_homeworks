@@ -1,18 +1,16 @@
-import java.util.regex.Pattern;
-
 public class Validation {
 
-    public static boolean validService(String login, String password, String confirmPassword )
+    private static final String PATTERNLog = "^[a-zA-Z_0-9]{0,20}$";
+    private static final String PATTERNPass = "^[a-zA-Z0-9]{0,20}$";
+
+    public void Valid(String login, String password, String confirmPassword)
             throws WrongLoginException, WrongPasswordException {
 
-        boolean isLogin = Pattern.matches("^[a-zA-Z_0-9]{0,20}$", login);
-        boolean isPassword = Pattern.matches("^[a-zA-Z0-9]{0,20}$", password);
-
-        if (!isLogin) {
+        if (!login.matches(PATTERNLog)) {
             throw new WrongLoginException("Invalid Login");
-        } else if (!isPassword | !password.equals(confirmPassword)) {
+        } else if (!password.matches(PATTERNPass) | !password.equals(confirmPassword)) {
             throw new WrongPasswordException();
-        } return true;
+        }
     }
 }
 
