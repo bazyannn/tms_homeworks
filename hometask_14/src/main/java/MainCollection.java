@@ -52,7 +52,7 @@ public class MainCollection {
 
         for (Student student : studentList) {
             List<String> classes = student.getClasses();
-            if (classes.size() < 2) {
+            if (classes != null && classes.size() < 2) {
                 studentClass.add(student);
             }
         }
