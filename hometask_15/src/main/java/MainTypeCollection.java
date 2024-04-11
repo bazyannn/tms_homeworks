@@ -51,9 +51,15 @@ public class MainTypeCollection {
 
         //        -----------------task3-------------------
 
-        Set<User> userUnic = new HashSet<>(userList);
+        Set<String> userName = new HashSet<>();
 
-        System.out.println(userUnic);
+        for (User user : userList){
+
+            userName.add(user.getName());
+
+        }
+
+        System.out.println(userName);
 
     }
     public static boolean isEmpty(List<?> objects){
