@@ -4,18 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2943883a-4596-4b0c-b395-6e2438ebfe4f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+    <list default="true" id="2943883a-4596-4b0c-b395-6e2438ebfe4f" name="Changes" comment="hometask_17">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,12 +19,80 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="tms_homeworks" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="hometask_16" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;history&quot;: [
+    {
+      &quot;state&quot;: &quot;OPEN&quot;,
+      &quot;author&quot;: &quot;bazyannn&quot;
+    },
+    {
+      &quot;state&quot;: &quot;OPEN&quot;
+    }
+  ],
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="recentNewPullRequestHead">
+      <RepoCoordinatesHolder>
+        <option name="owner" value="bazyannn" />
+        <option name="repository" value="tms_homeworks" />
+      </RepoCoordinatesHolder>
+    </option>
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="002aa929-3383-44bf-9786-f34cfed1e688" />
+        <option name="url" value="https://github.com/bazyannn/tms_homeworks.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2cY0x6rPvwLIKEOHOp1NPSS0ORV" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -41,19 +101,100 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Gradle.Build tms_homeworks.executor": "Run",
+    "Gradle.tms_homeworks [:MainReadWrite.main()].executor": "Run",
+    "Gradle.tms_homeworks:hometask_12 [:hometask_12:MainException.main()].executor": "Run",
+    "Gradle.tms_homeworks:hometask_12 [:hometask_12:MainRegex.main()].executor": "Run",
+    "Gradle.tms_homeworks:hometask_13 [:hometask_13:MainReadWrite.main()].executor": "Run",
+    "Gradle.tms_homeworks:hometask_14 [:hometask_14:MainCollection.main()].executor": "Run",
+    "Gradle.tms_homeworks:hometask_15 [:hometask_15:MainTypeCollection.main()].executor": "Run",
+    "Gradle.tms_homeworks:hometask_16 [:hometask_16:MainMap.main()].executor": "Run",
+    "Gradle.tms_homeworks:hometask_17 [:hometask_17:MainLambda.main()].executor": "Run",
+    "Gradle.tms_homeworks:hometask_5 [:hometask_5:Main.main()].executor": "Run",
+    "Gradle.tms_homeworks:hometask_8 [:hometask_8:Main.main()].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "hometask__17",
+    "jdk.selected.JAVA_MODULE": "azul-17",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/IdeaProjects/C28-onl/tms_homeworks",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/IdeaProjects/C28-onl/tms_homeworks/hometask_11/src/main/java/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "project.propVCSSupport.CommitDialog",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\IdeaProjects\C28-onl\tms_homeworks\hometask_13" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.MainMap">
+    <configuration name="MainCollection" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainCollection" />
+      <module name="tms_homeworks.hometask_14.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainLambda" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainLambda" />
+      <module name="tms_homeworks.hometask_17.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainMap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainMap" />
+      <module name="tms_homeworks.hometask_16.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainTypeCollection" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainTypeCollection" />
+      <module name="tms_homeworks.hometask_15.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="tms_homeworks" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MainMap" />
+        <item itemvalue="Application.MainCollection" />
+        <item itemvalue="Application.MainLambda" />
+        <item itemvalue="Gradle.tms_homeworks" />
+        <item itemvalue="Application.MainTypeCollection" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -70,10 +211,236 @@
       <option name="presentableId" value="Default" />
       <updated>1708273448421</updated>
       <workItem from="1708273449593" duration="390000" />
+      <workItem from="1710863966590" duration="1689000" />
+      <workItem from="1711032182433" duration="3606000" />
+      <workItem from="1711095568370" duration="8249000" />
+      <workItem from="1711106609484" duration="5890000" />
+      <workItem from="1711131642936" duration="2553000" />
+      <workItem from="1711192756113" duration="697000" />
+      <workItem from="1711303069809" duration="679000" />
+      <workItem from="1711361427709" duration="27444000" />
+      <workItem from="1711479354763" duration="559000" />
+      <workItem from="1711705535949" duration="10579000" />
+      <workItem from="1711977281236" duration="2155000" />
+      <workItem from="1711989594969" duration="2787000" />
+      <workItem from="1712046156125" duration="12449000" />
+      <workItem from="1712133257848" duration="8389000" />
+      <workItem from="1712487445087" duration="13791000" />
+      <workItem from="1712581508636" duration="2755000" />
+      <workItem from="1712600820820" duration="1571000" />
+      <workItem from="1712647905451" duration="8102000" />
+      <workItem from="1712657076674" duration="8755000" />
+      <workItem from="1712678257227" duration="1724000" />
+      <workItem from="1712739602182" duration="18579000" />
+      <workItem from="1712823569217" duration="17439000" />
+      <workItem from="1712842213519" duration="2068000" />
+      <workItem from="1712847276535" duration="5147000" />
+      <workItem from="1713199190765" duration="188000" />
+      <workItem from="1713199503677" duration="63000" />
+      <workItem from="1713199670075" duration="225000" />
+      <workItem from="1713199964181" duration="153000" />
+      <workItem from="1713200258349" duration="1009000" />
+      <workItem from="1713201840379" duration="34000" />
+      <workItem from="1713201896072" duration="95000" />
+      <workItem from="1713202085024" duration="417000" />
+      <workItem from="1713202527636" duration="40000" />
+      <workItem from="1713202592113" duration="13000" />
+      <workItem from="1713253481798" duration="571000" />
+      <workItem from="1713254069308" duration="2238000" />
+      <workItem from="1713281881087" duration="964000" />
     </task>
+    <task id="LOCAL-00001" summary="hometask_5.1(fixed_2)">
+      <option name="closed" value="true" />
+      <created>1710837640143</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1710837640143</updated>
+    </task>
+    <task id="LOCAL-00002" summary="hometask_8_fix.1">
+      <option name="closed" value="true" />
+      <created>1711116323878</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1711116323878</updated>
+    </task>
+    <task id="LOCAL-00003" summary="hometask_12">
+      <option name="closed" value="true" />
+      <created>1711403076197</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1711403076197</updated>
+    </task>
+    <task id="LOCAL-00004" summary="hometask_13">
+      <option name="closed" value="true" />
+      <created>1711714520677</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1711714520677</updated>
+    </task>
+    <task id="LOCAL-00005" summary="hometask_13(fix_module)">
+      <option name="closed" value="true" />
+      <created>1712053911834</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1712053911834</updated>
+    </task>
+    <task id="LOCAL-00006" summary="hometask_14">
+      <option name="closed" value="true" />
+      <created>1712054179626</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1712054179626</updated>
+    </task>
+    <task id="LOCAL-00007" summary="build.gradle">
+      <option name="closed" value="true" />
+      <created>1712064580380</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1712064580380</updated>
+    </task>
+    <task id="LOCAL-00008" summary="hometask_15">
+      <option name="closed" value="true" />
+      <created>1712142006172</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1712142006172</updated>
+    </task>
+    <task id="LOCAL-00009" summary="hometask_12(fix)">
+      <option name="closed" value="true" />
+      <created>1712492707439</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1712492707439</updated>
+    </task>
+    <task id="LOCAL-00010" summary="hometask_16">
+      <option name="closed" value="true" />
+      <created>1712742803309</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1712742803309</updated>
+    </task>
+    <task id="LOCAL-00011" summary="hometask_17">
+      <option name="closed" value="true" />
+      <created>1712841613717</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1712841613717</updated>
+    </task>
+    <task id="LOCAL-00012" summary="hometask_17">
+      <option name="closed" value="true" />
+      <created>1712844166367</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1712844166367</updated>
+    </task>
+    <task id="LOCAL-00013" summary="hometask_14(fix)">
+      <option name="closed" value="true" />
+      <created>1712849507483</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1712849507485</updated>
+    </task>
+    <task id="LOCAL-00014" summary="hometask_15(fix)">
+      <option name="closed" value="true" />
+      <created>1712850787252</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1712850787252</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="hometask_15" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="*" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="hometask_5.1(fixed_2)" />
+    <MESSAGE value="hometask_12" />
+    <MESSAGE value="hometask_13" />
+    <MESSAGE value="hometask_8_fix.1" />
+    <MESSAGE value="hometask_13(fix_module)" />
+    <MESSAGE value="build.gradle" />
+    <MESSAGE value="hometask_15" />
+    <MESSAGE value="hometask_12(fix)" />
+    <MESSAGE value="hometask_16" />
+    <MESSAGE value="hometask_14" />
+    <MESSAGE value="hometask_14(fix)" />
+    <MESSAGE value="hometask_17" />
+    <MESSAGE value="hometask_15(fix)" />
+    <option name="LAST_COMMIT_MESSAGE" value="hometask_15(fix)" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/hometask_12/src/main/java/MainException.java</url>
+          <line>1</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
@@ -8,6 +9,21 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/hometask_1" />
+            <option value="$PROJECT_DIR$/hometask_10" />
+            <option value="$PROJECT_DIR$/hometask_11" />
+            <option value="$PROJECT_DIR$/hometask_12" />
+            <option value="$PROJECT_DIR$/hometask_13" />
+            <option value="$PROJECT_DIR$/hometask_14" />
+            <option value="$PROJECT_DIR$/hometask_15" />
+            <option value="$PROJECT_DIR$/hometask_16" />
+            <option value="$PROJECT_DIR$/hometask_17" />
+            <option value="$PROJECT_DIR$/hometask_2" />
+            <option value="$PROJECT_DIR$/hometask_4" />
+            <option value="$PROJECT_DIR$/hometask_5" />
+            <option value="$PROJECT_DIR$/hometask_6" />
+            <option value="$PROJECT_DIR$/hometask_7" />
+            <option value="$PROJECT_DIR$/hometask_8" />
           </set>
         </option>
       </GradleProjectSettings>
