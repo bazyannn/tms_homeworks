@@ -41,13 +41,12 @@ public class MainTread {
 
         //-------------task2-----------------
 
-        List<Integer> integerList = new ArrayList<>(List.of(1,2,3,4,5,6,7,8,9));
+        List<Integer> integerList = new ArrayList<>(List.of(1, 2, 3, 4, 5, 6, 7, 8, 9));
 
-        Marker marker = new Marker();
 
-        Thread threadMin = new Thread(() -> new ListUtil(integerList,marker).countMin(integerList));
+        Thread threadMin = new Thread(() -> new ListUtil(integerList).countMin(integerList));
 
-        Thread threadMax = new Thread(() -> new ListUtil(integerList,marker).countMax(integerList));
+        Thread threadMax = new Thread(() -> new ListUtil(integerList).countMax(integerList));
 
 //        threadMin.setDaemon(true);   // ---task3
 //
@@ -63,32 +62,33 @@ public class MainTread {
 
         //-------------task4-----------------
 
+        Marker marker = new Marker();
+
         Thread thread1 = new Thread(() -> {
-            while (true) {
-                System.out.println(1);
-                System.out.println(1);
-                System.out.println(1);
-                try {
-                    Thread.sleep(3_000);
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
+
+            synchronized (marker) {
+
+                while (true) {
+                    System.out.println(1);
+                    System.out.println(1);
+                    System.out.println(1);
+
+                    break;
                 }
-                break;
             }
         });
 
         Thread thread2 = new Thread(() -> {
-            while (true) {
-                try {
-                    Thread.sleep(2_000);
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
-                System.out.println(2);
-                System.out.println(2);
-                System.out.println(2);
 
-                break;
+            synchronized (marker) {
+
+                while (true) {
+                    System.out.println(2);
+                    System.out.println(2);
+                    System.out.println(2);
+
+                    break;
+                }
             }
         });
 
