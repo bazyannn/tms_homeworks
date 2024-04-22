@@ -32,6 +32,7 @@
 
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 
@@ -41,14 +42,14 @@ public class MainStream {
 
         // ------------------ task 1 --------------------
 
-        Shop shopE1 = new Shop(1,"Grodno","pr.Pobedy 10", "+375291234567" );
-        Shop shopE2 = new Shop(2,"Grodno","pr.Svobody 10","+375291234568" );
-        Shop shopV1 = new Shop(3,"Vitebsk","pr.Stroiteley 8","+375291234522" );
-        Shop shopV2 = new Shop(4,"Vitebsk","pr.Frunze 35","+375291234521" );
-        Shop shopK1 = new Shop(5,"Minsk","pr.Nezavisimosti 5","+375291234571" );
-        Shop shopK2 = new Shop(6,"Minsk","pr.Pobediteley 15","+375291234572" );
-        Shop shopG1 = new Shop(7,"Brest","ul. Sovetskaya 22","+375291234555" );
-        Shop shopG2 = new Shop(8,"Brest","pr. Moskovskiy 110","+375291234556" );
+        Shop shopE1 = new Shop(1, "Grodno", "pr.Pobedy 10", "+375291234567");
+        Shop shopE2 = new Shop(2, "Grodno", "pr.Svobody 10", "+375291234568");
+        Shop shopV1 = new Shop(3, "Vitebsk", "pr.Stroiteley 8", "+375291234522");
+        Shop shopV2 = new Shop(4, "Vitebsk", "pr.Frunze 35", "+375291234521");
+        Shop shopK1 = new Shop(5, "Minsk", "pr.Nezavisimosti 5", "+375291234571");
+        Shop shopK2 = new Shop(6, "Minsk", "pr.Pobediteley 15", "+375291234572");
+        Shop shopG1 = new Shop(7, "Brest", "ul. Sovetskaya 22", "+375291234555");
+        Shop shopG2 = new Shop(8, "Brest", "pr. Moskovskiy 110", "+375291234556");
 
         Producer producer1 = new Producer("Prod1", "Belarus");
         Producer producer2 = new Producer("Prod2", "Belarus");
@@ -58,14 +59,14 @@ public class MainStream {
         Producer producer6 = new Producer("Prod6", "Ecuador");
         Producer producer7 = new Producer("Prod7", "Poland");
 
-        Tool tool1 = new Tool("Moloko", 2,Category.MILK, true, List.of(shopE1,shopV1),producer1 );
-        Tool tool2 = new Tool("Cheese", 22,Category.MILK, false, List.of(shopE1,shopK1),producer2 );
-        Tool tool3 = new Tool("Tomat", 12,Category.VEGETABLE, false, List.of(shopK1),producer3 );
-        Tool tool4 = new Tool("Ogurec", 8,Category.VEGETABLE, true, List.of(shopG1),producer4 );
-        Tool tool5 = new Tool("Sosiski", 10,Category.MEAT, true, List.of(shopV1),producer5 );
-        Tool tool6 = new Tool("Kolbasa", 24,Category.MEAT, false, List.of(shopG1),producer5 );
-        Tool tool7 = new Tool("Banan", 5,Category.FRUIT, false, List.of(shopE2,shopV2,shopK2,shopG2),producer6 );
-        Tool tool8 = new Tool("Apple", 3,Category.FRUIT, true, List.of(shopE2,shopV2,shopK2,shopG2),producer7 );
+        Tool tool1 = new Tool("Moloko", 2, Category.MILK, true, List.of(shopE1, shopV1), producer1);
+        Tool tool2 = new Tool("Cheese", 22, Category.MILK, false, List.of(shopE1, shopK1), producer2);
+        Tool tool3 = new Tool("Tomat", 12, Category.VEGETABLE, false, List.of(shopK1), producer3);
+        Tool tool4 = new Tool("Ogurec", 8, Category.VEGETABLE, true, List.of(shopG1), producer4);
+        Tool tool5 = new Tool("Sosiski", 10, Category.MEAT, true, List.of(shopV1), producer5);
+        Tool tool6 = new Tool("Kolbasa", 24, Category.MEAT, false, List.of(shopG1), producer5);
+        Tool tool7 = new Tool("Banan", 5, Category.FRUIT, false, List.of(shopE2, shopV2, shopK2, shopG2), producer6);
+        Tool tool8 = new Tool("Apple", 3, Category.FRUIT, true, List.of(shopE2, shopV2, shopK2, shopG2), producer7);
 
         List<Tool> toolList = new ArrayList<>();
         toolList.add(tool1);
@@ -79,19 +80,15 @@ public class MainStream {
 
         // ---1) определить самый дорогой и дешевый товар
 
-        Integer minInt = toolList.stream()
-                .mapToInt(tool -> tool.getPrice())
-                .min()
-                    .getAsInt();
+        Tool toolMin = toolList.stream()
+                .min((t, t1) -> t.getPrice() - t1.getPrice())
+                .get();
+        System.out.println("MIN priceTool: " + toolMin);
 
-        System.out.println(minInt);
-
-        Integer maxInt = toolList.stream()
-                .mapToInt(tool -> tool.getPrice())
-                .max()
-                    .getAsInt();
-
-        System.out.println(maxInt);
+        Tool toolMax = toolList.stream()
+                .max((t, t1) -> t.getPrice() - t1.getPrice())
+                .get();
+        System.out.println("MAX priceTool: " + toolMax);
 
 
 //        List<Tool> toolsPrice = toolList.stream()
@@ -112,10 +109,10 @@ public class MainStream {
         // ---3) посчитать среднюю стоимость товара указанной категории
 
         Double avgToolPrice = toolList.stream()
-                .filter(Tool::isDelivery)
+                .filter(tool -> tool.getCategory() == Category.MILK)
                 .mapToInt(Tool::getPrice)
                 .average()
-                        .getAsDouble();
+                .getAsDouble();
 
         System.out.println(avgToolPrice);
 
@@ -129,11 +126,12 @@ public class MainStream {
 
         // ---5) найти всех названия производителей указанной страны
 
-        List<Tool> toolCountry = toolList.stream()
+        List<String> belarus = toolList.stream()
                 .filter(tool -> tool.getProducer().getCountry().equals("Belarus"))
-                .toList();
+                .map(tool -> tool.getProducer().getName())
+                .collect(Collectors.toList());
 
-        System.out.println(toolCountry);
+        System.out.println(belarus);
 
         // ---6) найти все магазины конкретного города
 
@@ -200,11 +198,10 @@ public class MainStream {
 
         // ---1) Найти среднее значение первых 10 чисел.
 
-        Double average = Stream.iterate(1, val -> val + 1)
+        double average = IntStream.iterate(1, value -> value + 1)
                 .limit(10)
-                .mapToInt(value -> value)
                 .average()
-                        .getAsDouble();
+                .getAsDouble();
 
         System.out.println(average);
 
@@ -219,15 +216,16 @@ public class MainStream {
 
         // ---3) Посчитать сумму 20 подряд идущих чисел
 
-        Integer sum = Stream.iterate(1, n -> n + 1)
+        Integer sum = IntStream.iterate(1, n -> n + 1)
                 .limit(20)
-                .mapToInt(n -> n)
                 .sum();
 
         System.out.println(sum);
 
 
-    }  public static boolean isNumber(List<Shop> shopList){
+    }
+
+    public static boolean isNumber(List<Shop> shopList) {
         return shopList.stream()
                 .anyMatch(shop -> shop.getNumber() == 4);
     }
