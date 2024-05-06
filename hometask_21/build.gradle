@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'war'
 }
 
 group = 'org.example'
@@ -10,6 +11,9 @@ repositories {
 }
 
 dependencies {
+    implementation group: 'org.apache.commons', name: 'commons-collections4', version: '4.5.0-M1'
+    implementation group: 'commons-io', name: 'commons-io', version: '2.16.1'
+
     compileOnly 'org.projectlombok:lombok:1.18.32'
     annotationProcessor 'org.projectlombok:lombok:1.18.32'
 
@@ -19,4 +23,8 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+task("Hi").doLast {
+    println("Hello")
 }
