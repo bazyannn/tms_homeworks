@@ -23,9 +23,6 @@ include 'hometask_24'
 include 'hometask_25'
 include 'hometask_26'
 include 'hometask_27'
-<<<<<<< hometask_29
-include 'hometask_29'
-=======
 include 'hometask_28'
->>>>>>> master
-
+include 'hometask_29'
+include 'hometask_30'
