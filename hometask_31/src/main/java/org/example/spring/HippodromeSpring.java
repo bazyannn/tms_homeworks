@@ -1,6 +1,6 @@
 package org.example.spring;
 
-import org.example.spring.interfaces.Horse;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -14,24 +14,24 @@ import java.util.Scanner;
 @AllArgsConstructor
 @Component
 
-public class HippodromeSpring implements Horse {
+public class HippodromeSpring  {
 
     private List<HorseImpl> horses;
     private User user;
-    @Override
-    public void move() {
-        for (HorseImpl horse : horses) {
-            horse.move();
-        }
-    }
-
-    @Override
-    public void print() {
-        for (HorseImpl horse : horses){
-            horse.print();
-        }
-        System.out.println();
-    }
+//    @Override
+//    public void move() {
+//        for (HorseImpl horse : horses) {
+//            horse.move();
+//        }
+//    }
+//
+//    @Override
+//    public void print() {
+//        for (HorseImpl horse : horses){
+//            horse.print();
+//        }
+//        System.out.println();
+//    }
 
     public void run() {
 
@@ -52,8 +52,14 @@ public class HippodromeSpring implements Horse {
             user = new User(user.getCount(), horseId, bet);
 
             for (int i = 0; i < 10; i++) {
-                move();
-                print();
+                for (HorseImpl horse : horses) {
+                    horse.move();
+                    horse.print();
+                }
+                System.out.println();
+
+//                move();
+//                print();
                 try {
                     Thread.sleep(2000);
                 } catch (InterruptedException e) {

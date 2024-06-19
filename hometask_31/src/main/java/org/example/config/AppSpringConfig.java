@@ -6,7 +6,9 @@ import org.springframework.context.annotation.*;
 
 
 @Configuration
-@ComponentScan("org.example.spring")
+@EnableAspectJAutoProxy
+@ComponentScan("org.example")
+
 
 public class AppSpringConfig {
 

@@ -1,5 +1,6 @@
 package org.example.spring.interfaces.impl;
 
+import org.example.aspect.Benchmark;
 import org.example.spring.interfaces.Horse;
 import lombok.*;
 
@@ -12,7 +13,7 @@ public class HorseImpl implements Horse {
     private final double speed = 4.5;
     private double distance;
 
-    public HorseImpl(Integer id) {
+        public HorseImpl(Integer id) {
         this.id = id;
     }
 
@@ -22,9 +23,9 @@ public class HorseImpl implements Horse {
                 id +
                 '}';
     }
-
+    @Benchmark
     @Override
-    public void move() {
+        public void move() {
         distance += speed * Math.random();
     }
 
