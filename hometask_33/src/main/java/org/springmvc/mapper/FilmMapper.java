@@ -1,11 +1,8 @@
 package org.springmvc.mapper;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 import org.springmvc.dto.Film;
 import org.springmvc.dto.Genre;
 
@@ -17,13 +14,14 @@ import java.util.UUID;
 
 @Component
 @Data
+
 public class FilmMapper {
 
-    private final Film film;
+    private final ObjectProvider<Film> filmObjectProvider;
 
     public Film map (ResultSet resultSet, boolean needNext) {
 
-        Film film = new Film();
+        Film object = filmObjectProvider.getObject();
 
         try {
             if (needNext){
@@ -36,17 +34,17 @@ public class FilmMapper {
             int year = resultSet.getInt("year");
             boolean isViewed = resultSet.getBoolean("is_viewed");
 
-            film.setId(id);
-            film.setTitle(title);
-            film.setDescription(description);
-            film.setGenre(genre);
-            film.setYear(year);
-            film.setIsViewed(isViewed);
+            object.setId(id);
+            object.setTitle(title);
+            object.setDescription(description);
+            object.setGenre(genre);
+            object.setYear(year);
+            object.setIsViewed(isViewed);
 
         } catch (SQLException e) {
             return null;
         }
-        return film;
+        return object;
 
     }
 

@@ -1,6 +1,5 @@
 package org.springmvc.config;
 
-
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletRegistration;
