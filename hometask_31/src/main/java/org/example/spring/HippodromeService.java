@@ -1,43 +1,30 @@
 package org.example.spring;
 
-
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
-import org.example.spring.interfaces.impl.HorseImpl;
+import lombok.*;
+import org.example.aspect.Benchmark;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Scanner;
 
-@Getter @Setter
+@Getter
+@Setter
 @AllArgsConstructor
 @Component
 
-public class HippodromeSpring  {
+public class HippodromeService {
 
-    private List<HorseImpl> horses;
+    private List<Horse> horses;
     private User user;
-//    @Override
-//    public void move() {
-//        for (HorseImpl horse : horses) {
-//            horse.move();
-//        }
-//    }
-//
-//    @Override
-//    public void print() {
-//        for (HorseImpl horse : horses){
-//            horse.print();
-//        }
-//        System.out.println();
-//    }
+    private int horseId;
+    private int bet;
 
+    @Benchmark
     public void run() {
 
-        while (user.getCount() != 0) {
+        while (user.getWallet() != 0) {
 
-            System.out.println("Your debit is: " + user.getCount());
+            System.out.println("Your debit is: " + user.getWallet());
 
             System.out.println("Choose your favorite horse-number from this: " + getHorses().toString());
 
@@ -45,21 +32,21 @@ public class HippodromeSpring  {
 
             int horseId = scanner.nextInt();
 
+            this.horseId = horseId;
+
             System.out.println("Place your bet: ");
 
             int bet = scanner.nextInt();
 
-            user = new User(user.getCount(), horseId, bet);
+            this.bet = bet;
 
             for (int i = 0; i < 10; i++) {
-                for (HorseImpl horse : horses) {
+                for (Horse horse : horses) {
                     horse.move();
                     horse.print();
                 }
                 System.out.println();
 
-//                move();
-//                print();
                 try {
                     Thread.sleep(2000);
                 } catch (InterruptedException e) {
@@ -69,16 +56,15 @@ public class HippodromeSpring  {
             printWinner();
             calcUserCount();
 
-            if (user.getCount() == 0) {
+            if (user.getWallet() == 0) {
                 System.out.println("You are LOSE!!!");
             }
-
         }
     }
 
-    public HorseImpl getWinner() {
-        HorseImpl tempHorse = horses.get(0);
-        for (HorseImpl horse : horses) {
+    public Horse getWinner() {
+        Horse tempHorse = horses.get(0);
+        for (Horse horse : horses) {
             if (horse.getDistance() > tempHorse.getDistance()) {
                 tempHorse = horse;
             }
@@ -90,11 +76,11 @@ public class HippodromeSpring  {
         System.out.println("WINNER is: " + getWinner().getId() + "!");
     }
 
-    public void  calcUserCount() {
-        if (getWinner().getId() == user.getHorseId()) {
-            user.setCount(user.getCount() + user.getBet());
+    public void calcUserCount() {
+        if (getWinner().getId() == this.getHorseId()) {
+            user.setWallet(user.getWallet() + this.getBet());
         } else {
-            user.setCount(user.getCount() - user.getBet());
+            user.setWallet(user.getWallet() - this.getBet());
         }
     }
 }

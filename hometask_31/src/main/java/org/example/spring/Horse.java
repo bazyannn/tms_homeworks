@@ -1,35 +1,31 @@
-package org.example.spring.interfaces.impl;
+package org.example.spring;
 
-import org.example.aspect.Benchmark;
-import org.example.spring.interfaces.Horse;
 import lombok.*;
 
 @Getter
 @Setter
 
-public class HorseImpl implements Horse {
+public class Horse {
 
     private Integer id;
     private final double speed = 4.5;
     private double distance;
 
-        public HorseImpl(Integer id) {
+    public Horse(Integer id) {
         this.id = id;
     }
 
     @Override
     public String toString() {
-        return "Horse{"+
+        return "Horse{" +
                 id +
                 '}';
     }
-    @Benchmark
-    @Override
-        public void move() {
+
+    public void move() {
         distance += speed * Math.random();
     }
 
-    @Override
     public void print() {
         for (int i = 0; i < Math.round(distance); i++) {
             System.out.print(". ");
