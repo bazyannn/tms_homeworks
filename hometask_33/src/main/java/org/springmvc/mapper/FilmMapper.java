@@ -17,11 +17,11 @@ import java.util.UUID;
 
 public class FilmMapper {
 
-    private final ObjectProvider<Film> filmObjectProvider;
+    private Film film;
 
     public Film map (ResultSet resultSet, boolean needNext) {
 
-        Film object = filmObjectProvider.getObject();
+        Film film = new Film();
 
         try {
             if (needNext){
@@ -34,17 +34,17 @@ public class FilmMapper {
             int year = resultSet.getInt("year");
             boolean isViewed = resultSet.getBoolean("is_viewed");
 
-            object.setId(id);
-            object.setTitle(title);
-            object.setDescription(description);
-            object.setGenre(genre);
-            object.setYear(year);
-            object.setIsViewed(isViewed);
+            film.setId(id);
+            film.setTitle(title);
+            film.setDescription(description);
+            film.setGenre(genre);
+            film.setYear(year);
+            film.setIsViewed(isViewed);
 
         } catch (SQLException e) {
             return null;
         }
-        return object;
+        return film;
 
     }
 

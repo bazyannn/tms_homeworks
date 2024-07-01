@@ -15,8 +15,6 @@ import java.sql.Statement;
 
 public class ServletConfig implements WebApplicationInitializer {
 
-    private static Connection connection;
-
     static {
         try {
             DriverManager.registerDriver(new Driver());
