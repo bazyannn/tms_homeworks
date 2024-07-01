@@ -16,8 +16,6 @@ public class HippodromeService {
 
     private List<Horse> horses;
     private User user;
-    private int horseId;
-    private int bet;
 
     @Benchmark
     public void run() {
@@ -32,13 +30,9 @@ public class HippodromeService {
 
             int horseId = scanner.nextInt();
 
-            this.horseId = horseId;
-
             System.out.println("Place your bet: ");
 
             int bet = scanner.nextInt();
-
-            this.bet = bet;
 
             for (int i = 0; i < 10; i++) {
                 for (Horse horse : horses) {
@@ -54,7 +48,12 @@ public class HippodromeService {
                 }
             }
             printWinner();
-            calcUserCount();
+
+            if (getWinner().getId() == horseId) {
+                user.setWallet(user.getWallet() + bet);
+            } else {
+                user.setWallet(user.getWallet() - bet);
+            }
 
             if (user.getWallet() == 0) {
                 System.out.println("You are LOSE!!!");
@@ -76,11 +75,4 @@ public class HippodromeService {
         System.out.println("WINNER is: " + getWinner().getId() + "!");
     }
 
-    public void calcUserCount() {
-        if (getWinner().getId() == this.getHorseId()) {
-            user.setWallet(user.getWallet() + this.getBet());
-        } else {
-            user.setWallet(user.getWallet() - this.getBet());
-        }
-    }
 }

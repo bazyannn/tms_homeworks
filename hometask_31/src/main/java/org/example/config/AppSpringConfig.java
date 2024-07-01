@@ -4,18 +4,11 @@ import org.example.spring.Horse;
 import org.example.spring.User;
 import org.springframework.context.annotation.*;
 
-
 @Configuration
 @EnableAspectJAutoProxy(proxyTargetClass = true)
 @ComponentScan("org.example")
 
-
 public class AppSpringConfig {
-
-    @Bean
-    public int bet () {
-        return 0;
-    }
 
     @Bean
     public User user(){
