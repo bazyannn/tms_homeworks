@@ -1,14 +1,12 @@
 package org.example.config;
 
-import org.example.spring.interfaces.impl.HorseImpl;
+import org.example.spring.Horse;
 import org.example.spring.User;
 import org.springframework.context.annotation.*;
 
-
 @Configuration
-@EnableAspectJAutoProxy
+@EnableAspectJAutoProxy(proxyTargetClass = true)
 @ComponentScan("org.example")
-
 
 public class AppSpringConfig {
 
@@ -18,28 +16,28 @@ public class AppSpringConfig {
     }
 
     @Bean
-    public HorseImpl horse1() {
-        return new HorseImpl(1);
+    public Horse horse1() {
+        return new Horse(1);
     }
 
     @Bean
-    public HorseImpl horse2() {
-        return new HorseImpl(2);
+    public Horse horse2() {
+        return new Horse(2);
     }
 
     @Bean
-    public HorseImpl horse3() {
-        return new HorseImpl(3);
+    public Horse horse3() {
+        return new Horse(3);
     }
 
     @Bean
-    public HorseImpl horse4() {
-        return new HorseImpl(4);
+    public Horse horse4() {
+        return new Horse(4);
     }
 
     @Bean
-    public HorseImpl horse5() {
-        return new HorseImpl(5);
+    public Horse horse5() {
+        return new Horse(5);
     }
 
 }

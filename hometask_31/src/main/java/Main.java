@@ -11,7 +11,7 @@
 
         Все классы по возможности описать через любые конфигурации spring*/
 
-import org.example.spring.HippodromeSpring;
+import org.example.spring.HippodromeService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -19,7 +19,7 @@ public class Main {
     public static void main(String[] args) {
 
         ApplicationContext context = new AnnotationConfigApplicationContext("org.example.config");
-        HippodromeSpring bean = context.getBean(HippodromeSpring.class);
-        bean.run();
+        HippodromeService hippodrome = context.getBean(HippodromeService.class);
+        hippodrome.run();
     }
 }
