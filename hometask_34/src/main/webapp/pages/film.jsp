@@ -10,7 +10,7 @@
     <mes:message code="title"/>
 
     <p>
-        <mes:message code="localisation"/> <a href="//?lang=en">En</a>/<a href="//?lang=ru">Ru</a>
+        <mes:message code="localisation"/> <a href="/?lang=en">En</a>/<a href="/?lang=ru">Ru</a>
    </p><br>
 
 <p>
@@ -18,14 +18,14 @@
 </p>
 
 <sp:form method="post" action="/" modelAttribute="filmmodel" >
-    <b>Данные фильма:</b><br>
+    <b><mes:message code="descriptionFilm"/></b><br>
     <p>
         <sp:input path="title" type="text" name="title" placeholder="title"/> <sp:errors path="title"/> <br>
         <sp:input path="description" type="text" name="description" placeholder="description"/><br>
         <sp:input path="year" type="number" name="year" placeholder="year"/><sp:errors path="year"/><br>
     </p>
 
-    <b>Отметьте жанр фильма :</b><Br>
+    <b><mes:message code="descriptionGenre"/></b><Br>
     <p>
         <select name="genre">
             <c:forEach items="${genres}" var="genre">
@@ -34,9 +34,9 @@
         </select>
     </p>
     <p>
-        Вы смотели этот фильм:<input type="checkbox" name="viewed" value="viewed">
+        <mes:message code="descriptionView"/><input type="checkbox" name="viewed" value="viewed">
     </p>
-    <input type="submit" value="save">
+    <input type="submit" value="<mes:message code="save"/>">
 </sp:form>
 
 <hr>
@@ -55,9 +55,9 @@
 <hr>
 
 <form action="/search" method="post">
-    <input type="text" placeholder="search" name="search"><br>
+    <input type="text" placeholder="<mes:message code="search"/>" name="search"><br>
     <p>
-        <input type="submit" value="search">
+        <input type="submit" value="<mes:message code="search"/>">
     </p>
 </form>
 

@@ -8,11 +8,11 @@
 </head>
 <body>
 <p>
-    Edit Film<br>
+    <mes:message code="titleEdit"/><br>
 </p>
 
 <sp:form action="/edit" method="post" modelAttribute="filmmodel" >
-    <b>Данные фильма:</b><br>
+    <b><mes:message code="descriptionFilm"/></b><br>
     <p>
         <sp:input path="id" name="id" type="hidden" value="${film.id}"/>
         <sp:input path="title" type="text" name="title" placeholder="title" value="${film.title}"/><sp:errors path="title"/><br>
@@ -20,7 +20,7 @@
         <sp:input path="year" type="number" name="year" placeholder="year" value="${film.year}"/><sp:errors path="year"/><br>
     </p>
     <%--делал для себя Enum--%>
-    <b>Отметьте жанр фильма :</b><Br>
+    <b><mes:message code="descriptionGenre"/></b><Br>
     <p>
         <sp:select path="genre" name="genre">
             <%--тут показан тот жанр, который был выбран у фильма и решена проблема помнить, что надо выбрать genre, иначе genre = null и Exeption--%>
@@ -33,7 +33,7 @@
     </p>
 
     <p>
-        Вы смотели этот фильм:
+        <mes:message code="descriptionView"/>
         <c:if test="${film.isViewed == true}">
             <input type="checkbox" checked name="viewed">
         </c:if>
@@ -41,7 +41,7 @@
             <input type="checkbox" name="viewed">
         </c:if>
     </p>
-    <input type="submit" value="update">
+    <input type="submit" value="<mes:message code="update"/>">
 
 </sp:form>
 
