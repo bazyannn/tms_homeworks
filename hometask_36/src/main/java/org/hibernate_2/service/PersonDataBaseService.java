@@ -61,5 +61,30 @@ public class PersonDataBaseService {
         session.close();
     }
 
+    public void findByName(String name) {
+        Session session = appConfig.sessionFactory().openSession();
+        Transaction transaction = session.beginTransaction();
+        List<PersonEntity> resultList = session.createQuery("FROM PersonEntity where name= :name", PersonEntity.class)
+                .setParameter("name", name)
+                .getResultList();
 
+        System.out.println(resultList);
+
+        transaction.commit();
+        session.close();
+    }
+
+    public void findByAge(Integer age){
+        Session session = appConfig.sessionFactory().openSession();
+        Transaction transaction = session.beginTransaction();
+
+        List resultList = session.createQuery("FROM PersonEntity p where p.age < :age")
+                .setParameter("age", age)
+                .list();
+
+        System.out.println(resultList);
+
+        transaction.commit();
+        session.close();
+    }
 }

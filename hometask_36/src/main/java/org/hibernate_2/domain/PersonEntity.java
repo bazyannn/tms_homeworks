@@ -18,23 +18,24 @@ import java.util.UUID;
 @ToString
 public class PersonEntity {
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
 //  @GeneratedValue(generator = "UUID")
     private UUID id;
     private String name; // так проще было отслеживать изменения в таблице
+    private Integer age;
     @CreationTimestamp
     private Date createDate;
     @UpdateTimestamp
     private Date updateDate;
     @Version
     private Integer version;
-    @OneToMany(mappedBy = "person", cascade = CascadeType.REMOVE) //cascade = CascadeType.ALL(так тоже верно будет? или лучше как указал?)
+    @OneToMany(mappedBy = "person", cascade = CascadeType.ALL) //cascade = CascadeType.ALL(так тоже верно будет? или лучше как указал?)
     private List<OrderEntity> orders = new ArrayList<>();
 
-    public PersonEntity(String name) {    // так проще было отслеживать изменения в таблице
+    public PersonEntity(String name, Integer age) {    // так проще было отслеживать изменения в таблице
         this.name = name;
+        this.age = age;
     }
 
     public void addOrder(OrderEntity order) {

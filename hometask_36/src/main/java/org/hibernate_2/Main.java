@@ -14,9 +14,9 @@ public class Main {
 
         System.out.println("Hello hibernate part2!");
 
-        PersonEntity personEntity1 = new PersonEntity("dima");  // так проще было отслеживать изменения в таблице
-        PersonEntity personEntity2 = new PersonEntity("petya");
-        PersonEntity personEntity3 = new PersonEntity("vano");
+        PersonEntity personEntity1 = new PersonEntity("dima",22);
+        PersonEntity personEntity2 = new PersonEntity("petya",18);
+        PersonEntity personEntity3 = new PersonEntity("vano",30);
 
         OrderEntity order1 = new OrderEntity();
         OrderEntity order2 = new OrderEntity();
@@ -35,17 +35,20 @@ public class Main {
         personService.savePerson(personEntity2);
         personService.savePerson(personEntity3);
 
-        personService.findById(UUID.fromString("73493f60-fb0f-4538-82c8-b1662176e2e3"));
+        personService.findByName("dima");
+        personService.findByAge(20);
+
+//        personService.findById(UUID.fromString("ce87392b-f9cd-42a4-93f9-670f2a3ae09c"));
 
         OrderDataBaseService orderService = new OrderDataBaseService();
         orderService.setAppConfig(appConfig);
-        orderService.saveOrder(order1);
-        orderService.saveOrder(order2);
-        orderService.saveOrder(order3);
+//        orderService.saveOrder(order1);
+//        orderService.saveOrder(order2);
+//        orderService.saveOrder(order3);
 
         personService.deletePerson(personEntity2);
 
-        orderService.findById(UUID.fromString("e71ba5c8-8daf-4f39-ab2d-43a007b2ad9d"));
+//        orderService.findById(UUID.fromString("e71ba5c8-8daf-4f39-ab2d-43a007b2ad9d"));
 
         orderService.deleteOrder(order1);
     }
