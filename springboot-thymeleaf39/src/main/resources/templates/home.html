@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+</head>
+<body>
+<p>
+    Add new Tool<br>
+</p>
+
+<form method="post" action="/" >
+    <b>Данные товара:</b><br>
+    <p>
+        <input type="text" name="title" placeholder="title" ><br>
+        <input type="number" name="cost" placeholder="cost"><br>
+        <input type="number" name="count" placeholder="count"><br>
+    </p>
+
+    <p>
+        Возможна доставка:<input type="checkbox" name="delivered" value="delivered">
+    </p>
+    <input type="submit" value="save">
+</form>
+
+<hr>
+
+<ul type="square" th:each="toolEntity : ${tools}">
+
+    <div th:if="${toolEntity.getDeleted()} " style="background-color: rgba(0, 0, 0, 0.5)">
+
+       <li  th:text="${toolEntity.getTitle()} + ' --- '
+                     + ${toolEntity.getCost()} + ' --- '
+                     + ${toolEntity.getCount()} + ' --- '
+                     + ${toolEntity.getIsDelivered()}" >
+       </li>
+       <a role="link" aria-disabled="true">Edit</a>
+       - - - -
+       <a role="link" aria-disabled="true" >Delete</a>
+        - - - -
+        <a th:href="@{/{id}/return(id=${toolEntity.getId()})}">Return</a>
+
+    </div>
+    <div th:unless="${toolEntity.getDeleted()}">
+        <li  th:text="${toolEntity.getTitle()} + ' --- '
+                     + ${toolEntity.getCost()} + ' --- '
+                     + ${toolEntity.getCount()} + ' --- '
+                     + ${toolEntity.getIsDelivered()}" >
+        </li>
+        <a th:href="@{/edit(id=${toolEntity.getId()})}">Edit</a>
+        - - - -
+        <a th:href="@{/{id}/delete(id=${toolEntity.getId()})}">Delete</a>
+
+    </div>
+</ul>
+
+<hr>
