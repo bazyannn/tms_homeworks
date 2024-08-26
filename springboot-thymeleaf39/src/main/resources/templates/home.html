@@ -38,7 +38,7 @@
        - - - -
        <a role="link" aria-disabled="true" >Delete</a>
         - - - -
-        <a th:href="@{/{id}/return(id=${toolEntity.getId()})}">Return</a>
+        <a th:href="@{/return(id=${toolEntity.getId()})}">Return</a>
 
     </div>
     <div th:unless="${toolEntity.getDeleted()}">
@@ -49,9 +49,9 @@
         </li>
         <a th:href="@{/edit(id=${toolEntity.getId()})}">Edit</a>
         - - - -
-        <a th:href="@{/{id}/delete(id=${toolEntity.getId()})}">Delete</a>
+        <a th:href="@{/delete(id=${toolEntity.getId()})}">Delete</a>
 
     </div>
 </ul>
 
-<hr>
+<hr >

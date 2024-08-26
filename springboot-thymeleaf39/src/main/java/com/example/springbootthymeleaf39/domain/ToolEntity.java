@@ -4,6 +4,7 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -13,7 +14,9 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "tools")
-@NoArgsConstructor @Getter @Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter @Setter
 
 public class ToolEntity {
 
@@ -26,12 +29,4 @@ public class ToolEntity {
     @Column(name = "is_delivered")
     private Boolean isDelivered;
     private Boolean deleted;
-
-    public ToolEntity(String title, Integer cost, Integer count, Boolean isDelivered) {
-        this.id = UUID.randomUUID();
-        this.title = title;
-        this.cost = cost;
-        this.count = count;
-        this.isDelivered = isDelivered;
-    }
 }
