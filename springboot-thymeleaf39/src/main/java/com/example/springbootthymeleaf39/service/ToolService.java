@@ -1,5 +1,6 @@
 package com.example.springbootthymeleaf39.service;
 
+import com.example.springbootthymeleaf39.dto.SearchDto;
 import com.example.springbootthymeleaf39.dto.ToolDto;
 
 import java.util.List;
@@ -17,5 +18,5 @@ public interface ToolService {
     void createTool (ToolDto tool );// использовал как для создания записи о товаре, так и для редактирования
 
     List<ToolDto> findAll();
-
+    List<ToolDto> findAll(SearchDto dto);
 }
