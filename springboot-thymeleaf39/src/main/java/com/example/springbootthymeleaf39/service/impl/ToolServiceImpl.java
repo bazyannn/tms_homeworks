@@ -77,7 +77,7 @@ public class ToolServiceImpl implements ToolService {
 
             Boolean isDelivered = searchDto.getIsDelivered();
 
-            if ( isDelivered != null) {
+            if ( isDelivered !=null && isDelivered == true) {
                 Predicate isDeliveredPr = criteriaBuilder.equal(root.get("isDelivered").as(Boolean.class), isDelivered);
                 predicates.add(isDeliveredPr);
             }
