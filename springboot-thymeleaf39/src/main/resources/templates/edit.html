@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Editpage</title>
+</head>
+<body>
+<p>
+    Edit Tool<br>
+</p>
+
+<form method="post" th:action="@{/edit(id=${tool.getId()})}" th:object="${tool}" >
+    <b>Данные товара:</b><br>
+    <p>
+        <input name="id" type="hidden" th:field="*{id}">
+        <input type="text"  placeholder="title" th:field="*{title}"><br>
+        <input type="number"  placeholder="cost" th:field="*{cost}"><br>
+        <input type="number"  placeholder="count" th:field="*{count}"><br>
+    </p>
+
+    <p>
+        Вы смотели этот фильм:
+
+            <input th:if="${tool.isDelivered}" type="checkbox" checked name="delivered">
+
+            <input th:unless="${tool.isDelivered}" type="checkbox" name="delivered">
+
+    </p>
+    <input type="submit" value="update">
+
+</form>
+
+</body>
+</html>
