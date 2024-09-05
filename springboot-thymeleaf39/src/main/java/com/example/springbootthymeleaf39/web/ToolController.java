@@ -1,5 +1,6 @@
 package com.example.springbootthymeleaf39.web;
 
+import com.example.springbootthymeleaf39.dto.SearchDto;
 import com.example.springbootthymeleaf39.dto.ToolDto;
 import com.example.springbootthymeleaf39.service.ToolService;
 import lombok.RequiredArgsConstructor;
@@ -7,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.UUID;
 
 @Controller
@@ -66,5 +68,17 @@ public class ToolController {
         toolService.returnTool(id);
 
         return "redirect:/";
+    }
+
+    @PostMapping("/search")
+    public String search(SearchDto dto,
+                         @RequestParam(value = "delivered", required = false) String delivered,
+                         Model model){
+        boolean isDelivered = delivered == null || delivered.isBlank() ? false : true;
+        dto.setIsDelivered(isDelivered);
+        List<ToolDto> all = toolService.findAll(dto);
+        model.addAttribute("tools", all);
+
+        return "home";
     }
 }
