@@ -9,7 +9,7 @@
     Add new Tool<br>
 </p>
 
-<form method="post" action="/" >
+<form method="post" th:action="@{/}" >
     <b>Данные товара:</b><br>
     <p>
         <input type="text" name="title" placeholder="title" ><br>
@@ -38,7 +38,7 @@
        - - - -
        <a role="link" aria-disabled="true" >Delete</a>
         - - - -
-        <a th:href="@{/return(id=${toolEntity.getId()})}">Return</a>
+        <a th:href="@{/return(id=${toolEntity.getId()},deleted = false)}">Return</a>
 
     </div>
     <div th:unless="${toolEntity.getDeleted()}">
@@ -49,9 +49,18 @@
         </li>
         <a th:href="@{/edit(id=${toolEntity.getId()})}">Edit</a>
         - - - -
-        <a th:href="@{/delete(id=${toolEntity.getId()})}">Delete</a>
+        <a th:href="@{/delete(id=${toolEntity.getId()},deleted = true)}">Delete</a>
 
     </div>
 </ul>
 
 <hr >
+
+<form th:action="@{/search}" method="post">
+    <p>Title for searching: <input type="text" name="title"></p>
+    <p>Searching for cost more then: <input type="number" name="costMoreThen"></p>
+    <p>Searching for count less then: <input type="number" name="countLessThen"></p>
+    <p>Is it possible to deliver this tool: <input type="checkbox" name="delivered"></p>
+    <input type="submit" value="Find">
+
+</form>

@@ -14,11 +14,11 @@ public interface ToolRepository extends JpaRepository<ToolEntity, UUID>, JpaSpec
 
     @Transactional
     @Modifying
-    @Query(value = "update ToolEntity set deleted = true where id= :id")
-    void deleteTool(UUID id);
+    @Query(value = "update ToolEntity set deleted = :deleted where id= :id")
+    void deleteTool(UUID id,Boolean deleted);
 
-    @Transactional
-    @Modifying
-    @Query(value = "update tools set deleted = false where id= :id", nativeQuery = true)
-    void returnTool(UUID id);
+//    @Transactional
+//    @Modifying
+//    @Query(value = "update tools set deleted = false where id= :id", nativeQuery = true)
+//    void returnTool(UUID id);
 }

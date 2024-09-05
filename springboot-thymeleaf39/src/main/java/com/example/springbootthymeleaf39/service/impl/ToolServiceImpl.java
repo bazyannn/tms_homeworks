@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 @RequiredArgsConstructor
@@ -39,19 +40,22 @@ public class ToolServiceImpl implements ToolService {
 
     @Override
     public ToolDto findById(UUID id) {
-        ToolEntity entity = toolRepo.findById(id).get();
-        return mapper.toDto(entity);
+        Optional<ToolEntity> tool = toolRepo.findById(id);
+        if (tool.isPresent()) {
+            return mapper.toDto(tool.get());
+        }
+       return null;
     }
 
     @Override
-    public void deleteTool(UUID id) {
-        toolRepo.deleteTool(id);
+    public void deleteTool(UUID id, Boolean deleted) {
+        toolRepo.deleteTool(id, deleted);
     }
 
-    @Override
-    public void returnTool(UUID id) {
-        toolRepo.returnTool(id);
-    }
+//    @Override
+//    public void returnTool(UUID id, Boolean deleted) {
+//        toolRepo.returnTool(id);
+//    }
 
     private Specification<ToolEntity> createSpecification(SearchDto searchDto){
         return (root, query, criteriaBuilder) -> {
@@ -59,7 +63,7 @@ public class ToolServiceImpl implements ToolService {
 
             String title = searchDto.getTitle();
             if (title !=null && !title.isEmpty()){
-                Predicate titlePr = criteriaBuilder.equal(root.get("title"), title);
+                Predicate titlePr = criteriaBuilder.like(root.get("title"), title);
                 predicates.add(titlePr);
             }
 
@@ -81,6 +85,10 @@ public class ToolServiceImpl implements ToolService {
                 Predicate isDeliveredPr = criteriaBuilder.equal(root.get("isDelivered").as(Boolean.class), isDelivered);
                 predicates.add(isDeliveredPr);
             }
+//            if ( isDelivered !=null) {
+//                Predicate isDeliveredPr = criteriaBuilder.equal(root.get("isDelivered").as(Boolean.class), isDelivered);
+//                predicates.add(isDeliveredPr);
+//            }
              /*Сергей, подскажи пожалуйста. У меня получается поиск по двум значениям одновременно,
              когда не ставишь чекбокс о возможности(хотя выбираю другой критерий для поиска) доставки
              (потому что летит значение false в поле Boolean isDelivered у ToolEntity).
