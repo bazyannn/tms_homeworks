@@ -8,9 +8,9 @@ import java.util.UUID;
 
 public interface ToolService {
 
-    void returnTool(UUID id);
+//    void returnTool(UUID id);
 
-    void deleteTool(UUID id);
+    void deleteTool(UUID id, Boolean deleted);
 
 
     ToolDto findById(UUID id);

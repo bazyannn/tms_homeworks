@@ -57,15 +57,17 @@ public class ToolController {
     }
 
     @GetMapping("/delete")
-    public String delete(@RequestParam(name = "id") UUID id) {
-        toolService.deleteTool(id);
+    public String delete(@RequestParam(name = "id") UUID id,
+                         @RequestParam(name = "deleted") Boolean deleted) {
+        toolService.deleteTool(id, deleted);
 
         return "redirect:/";
     }
 
     @GetMapping("/return")
-    public String returnTool(@RequestParam(name = "id") UUID id) {
-        toolService.returnTool(id);
+    public String returnTool(@RequestParam(name = "id") UUID id,
+                             @RequestParam(name = "deleted") Boolean deleted) {
+        toolService.deleteTool(id,deleted);
 
         return "redirect:/";
     }
