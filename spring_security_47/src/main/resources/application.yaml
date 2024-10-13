@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/security_db
+    username: bazyan
+    password: z11411985z
+    driver-class-name: org.postgresql.Driver
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+  jpa:
+    show-sql: true
+app:
+  secret: jhgfasfygapwiugfrwpiueugfrsdmnbcfsnmhfbwlegflhsbdfsndfbljhyvglhujvagsdg34657ygfrh5u66uhjjhj6j567352462346rtg5
